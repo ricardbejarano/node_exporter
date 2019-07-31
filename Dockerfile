@@ -1,4 +1,4 @@
-FROM debian AS build
+FROM alpine AS build
 
 ARG EXPORTER_VERSION="0.18.1"
 ARG EXPORTER_CHECKSUM="b2503fd932f85f4e5baf161268854bf5d22001869b84f00fd2d1f57b51b72424"
@@ -9,12 +9,16 @@ RUN [ "$EXPORTER_CHECKSUM" = "$(sha256sum /tmp/node_exporter.tar.gz | awk '{prin
     tar -C /tmp -xf /tmp/node_exporter.tar.gz && \
     mv /tmp/node_exporter-$EXPORTER_VERSION.linux-amd64 /tmp/node_exporter
 
+RUN echo "nogroup:*:100:nobody" > /tmp/group && \
+    echo "nobody:*:100:100:::" > /tmp/passwd
+
 
 FROM scratch
 
-COPY --from=build /tmp/node_exporter/node_exporter /
-
-COPY rootfs /
+COPY --from=build --chown=100:100 /tmp/node_exporter/node_exporter /
+COPY --from=build --chown=100:100 /tmp/group \
+                                  /tmp/passwd \
+                                  /etc/
 
 USER 100:100
 EXPOSE 9100/tcp
