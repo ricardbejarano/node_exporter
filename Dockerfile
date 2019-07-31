@@ -1,13 +1,13 @@
 FROM alpine AS build
 
-ARG EXPORTER_VERSION="0.18.1"
-ARG EXPORTER_CHECKSUM="b2503fd932f85f4e5baf161268854bf5d22001869b84f00fd2d1f57b51b72424"
+ARG VERSION="0.18.1"
+ARG CHECKSUM="b2503fd932f85f4e5baf161268854bf5d22001869b84f00fd2d1f57b51b72424"
 
-ADD https://github.com/prometheus/node_exporter/releases/download/v$EXPORTER_VERSION/node_exporter-$EXPORTER_VERSION.linux-amd64.tar.gz /tmp/node_exporter.tar.gz
+ADD https://github.com/prometheus/node_exporter/releases/download/v$VERSION/node_exporter-$VERSION.linux-amd64.tar.gz /tmp/node_exporter.tar.gz
 
-RUN [ "$EXPORTER_CHECKSUM" = "$(sha256sum /tmp/node_exporter.tar.gz | awk '{print $1}')" ] && \
+RUN [ "$CHECKSUM" = "$(sha256sum /tmp/node_exporter.tar.gz | awk '{print $1}')" ] && \
     tar -C /tmp -xf /tmp/node_exporter.tar.gz && \
-    mv /tmp/node_exporter-$EXPORTER_VERSION.linux-amd64 /tmp/node_exporter
+    mv /tmp/node_exporter-$VERSION.linux-amd64 /tmp/node_exporter
 
 RUN echo "nogroup:*:100:nobody" > /tmp/group && \
     echo "nobody:*:100:100:::" > /tmp/passwd
