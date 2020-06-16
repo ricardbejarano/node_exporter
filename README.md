@@ -9,13 +9,13 @@
 
 Available on [Docker Hub](https://hub.docker.com) as [`ricardbejarano/node_exporter`](https://hub.docker.com/r/ricardbejarano/node_exporter):
 
-- [`1.0.0`, `master`, `latest` *(Dockerfile)*](https://github.com/ricardbejarano/node_exporter/blob/master/Dockerfile) (about `16.9MB`)
+- [`1.0.1`, `master`, `latest` *(Dockerfile)*](https://github.com/ricardbejarano/node_exporter/blob/master/Dockerfile) (about `16.9MB`)
 
 ### Quay
 
 Available on [Quay](https://quay.io) as:
 
-- [`quay.io/ricardbejarano/node_exporter`](https://quay.io/repository/ricardbejarano/node_exporter), tags: [`1.0.0`, `master`, `latest` *(Dockerfile.glibc)*](https://github.com/ricardbejarano/node_exporter/blob/master/Dockerfile.glibc) (about `16.9MB`)
+- [`quay.io/ricardbejarano/node_exporter`](https://quay.io/repository/ricardbejarano/node_exporter), tags: [`1.0.1`, `master`, `latest` *(Dockerfile.glibc)*](https://github.com/ricardbejarano/node_exporter/blob/master/Dockerfile.glibc) (about `16.9MB`)
 
 
 ## Features

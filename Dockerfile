@@ -1,7 +1,7 @@
 FROM alpine:3 AS build
 
-ARG VERSION="1.0.0"
-ARG CHECKSUM="fae88be0aa33c8ae22340723f9b4a4e519e67d2969da7a27751e755db7e75788"
+ARG VERSION="1.0.1"
+ARG CHECKSUM="3369b76cd2b0ba678b6d618deab320e565c3d93ccb5c2a0d5db51a53857768ae"
 
 ADD https://github.com/prometheus/node_exporter/releases/download/v$VERSION/node_exporter-$VERSION.linux-amd64.tar.gz /tmp/node_exporter.tar.gz
 
