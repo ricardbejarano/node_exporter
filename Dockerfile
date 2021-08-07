@@ -1,7 +1,7 @@
 FROM golang:1-alpine AS build
 
-ARG VERSION="1.1.2"
-ARG CHECKSUM="edb40c783bd5767f174b916c89a768496ccae0f74811ba1d03c57c32cd250bbd"
+ARG VERSION="1.2.0"
+ARG CHECKSUM="01ee195671868a3d250f380528df9ecc8cdf082d2e681d130377c802f30e0c81"
 
 ADD https://github.com/prometheus/node_exporter/archive/v$VERSION.tar.gz /tmp/node_exporter.tar.gz
 
