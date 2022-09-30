@@ -20,10 +20,10 @@
 
 Available on Docker Hub as [`docker.io/ricardbejarano/node_exporter`](https://hub.docker.com/r/ricardbejarano/node_exporter):
 
-- [`1.3.1`, `latest` *(Dockerfile)*](Dockerfile)
+- [`1.4.0`, `latest` *(Dockerfile)*](Dockerfile)
 
 ### RedHat Quay
 
 Available on RedHat Quay as [`quay.io/ricardbejarano/node_exporter`](https://quay.io/repository/ricardbejarano/node_exporter):
 
-- [`1.3.1`, `latest` *(Dockerfile)*](Dockerfile)
+- [`1.4.0`, `latest` *(Dockerfile)*](Dockerfile)
